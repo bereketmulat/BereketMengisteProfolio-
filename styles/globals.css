@@ -285,15 +285,13 @@ nav a:hover::after {
 /* ------------------------------ */
 .project {
   background-image: url("https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?cs=srgb&dl=pexels-bri-schneiter-28802-346529.jpg&fm=jpg");
-   background-repeat: no-repeat;  
-    background-size: cover; 
-    height: auto;
-    
-  flex-direction: column;
-  justify-content: center; 
-  align-items: center; 
-  text-align: center;
-  gap: 1.2rem;  
+  background-repeat: no-repeat;  
+  background-size: cover;      
+  display: flex;
+  justify-content: center;  
+  align-items: center;      
+  height: 850px;            
+  font-family: 'Times New Roman';
 }
 
 .project a {
