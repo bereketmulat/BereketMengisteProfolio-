@@ -244,6 +244,7 @@ nav a:hover::after {
 /*           Contact Page         */
 /* ------------------------------ */
 .Contact {
+  background-image: url("https://static.vecteezy.com/system/resources/thumbnails/071/599/269/small/a-majestic-snow-capped-mountain-peak-reflects-perfectly-in-a-calm-lake-under-a-starry-night-sky-photo.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   padding: 90px 20px;
@@ -282,6 +283,7 @@ nav a:hover::after {
 /*          Project Section       */
 /* ------------------------------ */
 .project {
+   background-image: url("https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?cs=srgb&dl=pexels-bri-schneiter-28802-346529.jpg&fm=jpg");
   background-size: cover;
   background-repeat: no-repeat;
   padding: 120px 20px;
