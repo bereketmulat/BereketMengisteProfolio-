@@ -245,25 +245,13 @@ nav a:hover::after {
 /* ------------------------------ */
 .Contact {
   background-image: url("https://static.vecteezy.com/system/resources/thumbnails/071/599/269/small/a-majestic-snow-capped-mountain-peak-reflects-perfectly-in-a-calm-lake-under-a-starry-night-sky-photo.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  background-attachment: scroll; /* important for mobile performance */
-
-  /* Use dynamic viewport height that works on mobile browsers */
-  min-height: 100svh;               /* modern browsers (preferred) */
-  min-height: 100vh;                /* fallback */
-  -webkit-min-height: 100vh;        /* older iOS fallback */
-
-  width: 100%;
+  background-repeat: no-repeat;  
+  background-size: cover;      
   display: flex;
-  justify-content: center;
-  align-items: center;
-
-  /* safe padding so content never hits edges on small screens */
-  padding: 24px 18px;
-  box-sizing: border-box;
-  position: relative; 
+  justify-content: center;  
+  align-items: center;      
+  height: 850px;            
+  font-family: 'Times New Roman';
 }
 
 .ContactInfo {
@@ -297,25 +285,15 @@ nav a:hover::after {
 /* ------------------------------ */
 .project {
   background-image: url("https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?cs=srgb&dl=pexels-bri-schneiter-28802-346529.jpg&fm=jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  background-attachment: scroll; /* important for mobile performance */
-
-  /* Use dynamic viewport height that works on mobile browsers */
-  min-height: 100svh;               /* modern browsers (preferred) */
-  min-height: 100vh;                /* fallback */
-  -webkit-min-height: 100vh;        /* older iOS fallback */
-
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  /* safe padding so content never hits edges on small screens */
-  padding: 24px 18px;
-  box-sizing: border-box;
-  position: relative; 
+   background-repeat: no-repeat;  
+    background-size: cover; 
+    height: 850px;
+    display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+  text-align: center;
+  gap: 1.2rem;  
 }
 
 .project a {
