@@ -290,8 +290,8 @@ nav a:hover::after {
 .project {
   background-image: url("https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?cs=srgb&dl=pexels-bri-schneiter-28802-346529.jpg&fm=jpg");
  background-repeat: no-repeat;  
-    background-size: cover; 
-    height: 100%;
+  background-size: cover; 
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center; 
