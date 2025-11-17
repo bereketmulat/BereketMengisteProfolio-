@@ -296,7 +296,6 @@ nav a:hover::after {
   background-repeat: no-repeat;
   background-size: cover;   /* cover entire area */
   background-position: center center; /* always centered */
-  display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
