@@ -1,267 +1,529 @@
-/* Global */
-body {
+/* Global Styles */
+* {
   margin: 0;
   padding: 0;
-  font-family: 'Times New Roman';
-  background-color: #f9f9fb;
-  color: #333;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #6366f1;
+  --secondary: #8b5cf6;
+  --accent: #ec4899;
+  --dark: #0f172a;
+  --light: #f8fafc;
+  --gray: #64748b;
+  --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-alt: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--dark);
+  color: var(--light);
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
-
-/* HERO IMAGE */
+/* Hero Image Section */
 .img {
+  position: relative;
   width: 100%;
-  height: 250px;
+  height: 60vh;
   overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
+
+.img::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.4) 0%, rgba(15, 23, 42, 0.9) 100%);
+  z-index: 1;
+}
+
 .img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s ease;
-}
-.img img:hover {
-  transform: scale(1.05);
+  animation: zoomIn 20s infinite alternate;
 }
 
+@keyframes zoomIn {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.1); }
+}
 
-/* NAV */
+/* Navigation */
 nav {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 1rem 0;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1.5rem 2rem;
+  background: rgba(15, 23, 42, 0.95);
   backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
+
 nav a {
+  color: var(--light);
   text-decoration: none;
-  font-weight: bold;
-  color: #333;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
   position: relative;
-  transition: color 0.3s ease;
+  overflow: hidden;
 }
-nav a::after {
-  content: "";
+
+nav a::before {
+  content: '';
   position: absolute;
-  left: 0;
-  bottom: -6px;
+  top: 0;
+  left: -100%;
   width: 100%;
-  height: 2px;
-  background: #0077ff;
-  transform: scaleX(0);
+  height: 100%;
+  background: var(--gradient);
+  transition: left 0.3s ease;
+  z-index: -1;
+  border-radius: 50px;
+}
+
+nav a:hover::before {
+  left: 0;
+}
+
+nav a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(102, 102, 246, 0.4);
+}
+
+/* Descriptive Container */
+.descriptive-container {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  align-items: center;
+}
+
+.Description img,
+.Description2 img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease;
 }
-nav a:hover {
-  color: #0077ff;
-}
-nav a:hover::after {
-  transform: scaleX(1);
+
+.Description img:hover,
+.Description2 img:hover {
+  transform: scale(1.05) rotate(2deg);
 }
 
-
-/* DESCRIPTION SECTION */
-.descriptive-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  justify-content: center;
-  padding: 3rem 5%;
-}
-
-.Description, .Description2 {
-  flex: 1 1 300px;
-  max-width: 450px;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-  transition: 0.3s ease;
-}
-.Description img, .Description2 img {
-  width: 100%;
-}
-.Description:hover, .Description2:hover {
-  transform: translateY(-4px) scale(1.03);
-}
-
-/* Text Box */
 .Description1 {
-  flex: 1 1 300px;
-  max-width: 450px;
   padding: 2rem;
-  background: white;
-  border-radius: 16px;
-  text-align: center;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-  transition: 0.3s ease;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
 }
+
 .Description1 p:first-child {
-  font-weight: bold;
-  font-size: 1.3rem;
-}
-.Description1:hover {
-  transform: translateY(-4px) scale(1.02);
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
 }
 
+.Description1 p:last-child {
+  font-size: 1.1rem;
+  color: var(--gray);
+  line-height: 1.8;
+}
 
-/* OBJECTIVE + EDUCATION + TEAM boxes */
-.objective,
-.Education,
-.Team {
-  width: 90%;
-  max-width: 700px;
-  margin: 30px auto;
-  padding: 20px;
-  background: white;
-  border-radius: 16px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+/* Objective Section */
+.objective {
+  max-width: 900px;
+  margin: 6rem auto;
+  padding: 3rem;
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+  border-radius: 30px;
   text-align: center;
-  transition: 0.3s ease;
-}
-.objective p:first-child,
-.Education p:first-child,
-.Team p:first-child {
-  font-size: 1.3rem;
-  font-weight: bold;
-}
-.objective:hover,
-.Education:hover,
-.Team:hover {
-  transform: translateY(-4px) scale(1.02);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
 }
 
+.objective::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+  animation: rotate 20s linear infinite;
+}
 
-/* SKILLS */
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.objective p:first-child {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: var(--gradient-alt);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.objective p:last-child {
+  font-size: 1.2rem;
+  color: var(--gray);
+  line-height: 1.8;
+  position: relative;
+  z-index: 1;
+}
+
+/* Education Section */
+.Education {
+  max-width: 800px;
+  margin: 6rem auto;
+  padding: 3rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.Education p:first-child {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.Education p:nth-child(2) {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.Education p:nth-child(3),
+.Education p:nth-child(4) {
+  font-size: 1.1rem;
+  color: var(--gray);
+  margin-bottom: 0.5rem;
+}
+
+/* Skills Section */
 .Skill {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
-  margin: 40px auto;
+  max-width: 1400px;
+  margin: 6rem auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 3rem;
+  align-items: center;
 }
 
 .skillimg img,
 .skillimg2 img {
-  max-width: 100%;
-  width: 330px;
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
   border-radius: 20px;
-  transition: 0.3s;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.skillimg img:hover,
+.skillimg2 img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 25px 70px rgba(99, 102, 241, 0.4);
 }
 
 .Skillslist {
-  flex: 1 1 300px;
-  max-width: 450px;
-  background: rgba(255,255,255,0.1);
-  padding: 2rem;
-  border-radius: 20px;
-  backdrop-filter: blur(10px);
+  padding: 3rem;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(236, 72, 153, 0.1) 100%);
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.Skillslist p {
+  font-size: 2rem;
+  font-weight: 700;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1.5rem;
+  margin-top: 2rem;
+}
+
+.Skillslist p:first-child {
+  margin-top: 0;
 }
 
 .Skillslist ul {
   list-style: none;
-  padding: 0;
-  columns: 1;
 }
 
 .Skillslist li {
-  padding-left: 1.5rem;
-  position: relative;
-  margin-bottom: 8px;
+  padding: 0.8rem 1.5rem;
+  margin-bottom: 0.8rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50px;
+  border-left: 3px solid var(--primary);
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
 }
 
-.Skillslist li::before {
-  content: "*";
-  position: absolute;
-  left: 0;
+.Skillslist li:hover {
+  background: rgba(99, 102, 241, 0.2);
+  transform: translateX(10px);
+  border-left-color: var(--accent);
 }
 
+/* Team Section */
+.Team {
+  max-width: 800px;
+  margin: 6rem auto 4rem;
+  padding: 3rem;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(236, 72, 153, 0.1) 100%);
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
 
-  .Skillslist p {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    color: black;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-  
+.Team p {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: var(--gradient-alt);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 2rem;
+  text-align: center;
+}
 
+.Team ul {
+  list-style: none;
+}
 
-/* CONTACT SECTION */
+.Team li {
+  padding: 1rem 2rem;
+  margin-bottom: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50px;
+  border-left: 3px solid var(--secondary);
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+}
+
+.Team li:hover {
+  background: rgba(139, 92, 246, 0.2);
+  transform: translateX(10px);
+  border-left-color: var(--accent);
+}
+
+/* Contact Page */
 .Contact {
-  background-image: url("https://static.vecteezy.com/system/resources/thumbnails/071/599/269/small/a-majestic-snow-capped-mountain-peak-reflects-perfectly-in-a-calm-lake-under-a-starry-night-sky-photo.jpg");
-  background-size: cover;
-  background-position: center;
-  padding: 60px 20px;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.1) 0%, rgba(15, 23, 42, 1) 70%);
 }
 
 .ContactInfo {
-  width: 90%;
-  max-width: 500px;
-  background-color: rgba(0,0,0,0.4);
-  padding: 30px;
-  border-radius: 12px;
+  max-width: 600px;
+  width: 100%;
+  padding: 4rem;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
   text-align: center;
 }
-.ContactInfo p {
-  color: white;
+
+.ContactInfo p:first-child {
+  font-size: 3rem;
+  font-weight: 700;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 3rem;
 }
 
-/* PROJECT SECTION */
+.ContactInfo p,
+.ContactInfo a {
+  font-size: 1.2rem;
+  color: var(--gray);
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.ContactInfo a {
+  display: inline-block;
+  color: var(--primary);
+  text-decoration: none;
+  padding: 0.8rem 2rem;
+  background: rgba(99, 102, 241, 0.1);
+  border-radius: 50px;
+  border: 1px solid rgba(99, 102, 241, 0.3);
+}
+
+.ContactInfo a:hover {
+  background: var(--gradient);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
+}
+
+/* Projects Page */
 .project {
-  background-image: url("https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg");
-  background-size: cover;
-  background-position: center;
-  padding: 60px 20px;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  justify-content: center;
   align-items: center;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  background: radial-gradient(circle at 50% 50%, rgba(236, 72, 153, 0.1) 0%, rgba(15, 23, 42, 1) 70%);
 }
 
 .project a {
-  color: white;
-  background: rgba(0,0,0,0.4);
-  padding: 0.7rem 2rem;
-  border-radius: 12px;
+  font-size: 1.5rem;
+  color: var(--light);
   text-decoration: none;
-  font-size: 1.3rem;
-  transition: 0.3s;
+  padding: 1.5rem 3rem;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.2) 0%, rgba(236, 72, 153, 0.2) 100%);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
 }
+
 .project a:hover {
-  transform: scale(1.05);
+  background: var(--gradient);
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(99, 102, 241, 0.4);
 }
 
-
-
-/* ============ MEDIA QUERIES ============ */
-@media (max-width: 600px) {
-
-  .img {
-    height: 160px;
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .Skill {
+    grid-template-columns: 1fr;
   }
-
-  .Skillslist {
-    text-align: center;
+  
+  .skillimg2 {
+    display: none;
   }
+  
+  .descriptive-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .Description2 {
+    display: none;
+  }
+}
 
+@media (max-width: 768px) {
+  nav {
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
   nav a {
+    padding: 0.5rem 1rem;
     font-size: 0.9rem;
   }
+  
+  .img {
+    height: 40vh;
+  }
+  
+  .Description1 p:first-child,
+  .objective p:first-child,
+  .Education p:first-child,
+  .Team p,
+  .ContactInfo p:first-child {
+    font-size: 2rem;
+  }
+  
+  .objective,
+  .Education,
+  .Team,
+  .ContactInfo {
+    padding: 2rem;
+  }
+  
+  .Skillslist {
+    padding: 2rem;
+  }
+  
+  .skillimg img {
+    height: 300px;
+  }
+  
+  .Skill {
+    margin: 3rem auto;
+  }
+  
+  .descriptive-container {
+    margin: 2rem auto;
+  }
+}
 
+@media (max-width: 480px) {
+  .Description1 p:first-child,
+  .objective p:first-child,
+  .Education p:first-child,
+  .Team p,
+  .ContactInfo p:first-child {
+    font-size: 1.5rem;
+  }
+  
+  .Description1 p:last-child,
+  .objective p:last-child {
+    font-size: 1rem;
+  }
+  
+  nav {
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  
   .project a {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
   }
 }
 
