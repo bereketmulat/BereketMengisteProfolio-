@@ -77,7 +77,7 @@ export default function Home() {
       
       <div className="Education">
 
-        <p>EDUCATION</p>
+        <p>Education</p>
 
         <p>SENECA POLYTECHNIC</p>
         <p>September 2023- August 2027</p>
@@ -100,7 +100,7 @@ export default function Home() {
 
       <div className="Skillslist">
         <ul>
-        <p>SKILLS</p>
+        <p>Skills</p>
         <li>React</li>
         <li>Python</li>
         <li>Node.js</li>
@@ -115,7 +115,7 @@ export default function Home() {
 
 
 
-        <p>PERSONAL SKILLS</p>
+        <p>Personal Skills</p>
         <li>Cross team collaboration</li>
         <li>Mentorship</li>
         <li>Knowledge sharing</li>
