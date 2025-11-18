@@ -60,11 +60,12 @@ export default function Home() {
         <p>Objective</p>
 
         <p>
-        Im a software Developer who enjoys turning ideas and interactive 
-        and functinal web experinces thriugh code, design and innovation.
+         Im a software Developer who enjoys turning ideas and interactive 
+        and functional web experiences through code, design and innovation.
 
-        building modern, efficient and user foucesed web application using 
+        building modern, efficient and user focused web application using 
         clean code and creative design. 
+ 
 
         </p>
 
