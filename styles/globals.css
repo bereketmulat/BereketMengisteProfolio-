@@ -138,24 +138,37 @@ nav a:hover::after {
 /* ------------------------------ */
 /*        Reusable Card Box       */
 /* ------------------------------ */
-.objective,
-.Education {
+.objective {
   width: 90%;
   max-width: 700px;
   margin: 40px auto;
   padding: 25px;
+  text-align: centre;
   background: white;
   border-radius: 16px;
   box-shadow: 0 10px 35px rgba(0,0,0,0.1);
   transition: all 0.35s ease;
 }
 
-.Team {
+
+.Education {
   width: 90%;
   max-width: 700px;
   margin: 40px auto;
   padding: 25px;
   text-align: centre;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.1);
+  transition: all 0.35s ease;
+}
+
+
+.Team {
+  width: 90%;
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 25px;
   background: white;
   border-radius: 16px;
   box-shadow: 0 10px 35px rgba(0,0,0,0.1);
