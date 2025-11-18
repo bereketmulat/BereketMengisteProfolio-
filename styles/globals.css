@@ -146,7 +146,6 @@ nav a:hover::after {
   margin: 40px auto;
   padding: 25px;
   background: white;
-  text-align: center;
   border-radius: 16px;
   box-shadow: 0 10px 35px rgba(0,0,0,0.1);
   transition: all 0.35s ease;
