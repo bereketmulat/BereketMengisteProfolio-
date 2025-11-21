@@ -340,36 +340,56 @@ background: rgba(0,0,0,0.45);
 
 }
 
-.project a:hover + p,
-.project a:hover + p + p {
-  opacity: 1;
-  transform: translateY(0);
-  visibility: visible;
-  position: relative;
-  margin: 20px auto; 
-}
-
-.project p:hover {
-  opacity: 1;
-  transform: translateY(0);
-  visibility: visible;
-  position: relative; 
-  margin: 20px auto;
-}
 
 
 
-@media (max-width: 700px) {
-  nav { gap: 1.2rem; }
-  nav a { font-size: 1rem; }
 
-  .img { height: 200px; }
 
-  .Skillslist ul { columns: 1; }
 
-  .project a,
-  .ContactInfo p {
-    font-size: 1.2rem;
+
+
+
+
+
+
+  @media (max-width: 768px) {
+    .project p {
+      padding: 30px 20px;
+      font-size: 0.95rem;
+    }
+    
+    .project a {
+      font-size: 1.3rem;
+      padding: 12px 20px;
+    }
+    
+    .project a:hover + p,
+    .project a:hover + p + p,
+    .project p:hover {
+      padding: 30px 20px;
+    }
+  }
+  
+
+  @media (max-width: 480px) {
+    .project p {
+      padding: 20px 15px;
+      font-size: 0.9rem;
+    }
+    
+    .project a {
+      font-size: 1.1rem;
+      padding: 10px 15px;
+      margin-top: 30px;
+      margin-bottom: 15px;
+    }
+    
+    .project a:hover + p,
+    .project a:hover + p + p,
+    .project p:hover {
+      padding: 20px 15px;
+      margin: 15px auto;
+    }
   }
 }
 
