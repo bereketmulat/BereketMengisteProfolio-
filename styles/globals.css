@@ -298,9 +298,8 @@ nav a:hover::after {
 }
 
 
-
-.project p {
-  background-image: url("https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?cs=srgb&dl=pexels-bri-schneiter-28802-346529.jpg&fm=jpg");
+.project{
+ background-image: url("https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?cs=srgb&dl=pexels-bri-schneiter-28802-346529.jpg&fm=jpg");
  background-repeat: no-repeat;  
   background-size: cover; 
     height: auto;
@@ -310,7 +309,18 @@ nav a:hover::after {
   justify-content: center; 
   align-items: center; 
   text-align: center;
-  gap: 1.2rem; 
+  gap: 1.2rem;  
+}
+
+.project p {
+ font-size: 1rem;
+  color: white;
+  padding: 40px;
+  background: rgba(0,0,0,0.45);
+  width: 750px;
+  border-radius: 5px;
+  opacity: 0;
+  max-height: 0;
   overflow: hidden;
   transition: all 0.4s ease;
   padding: 0;
