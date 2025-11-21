@@ -299,6 +299,8 @@ nav a:hover::after {
 
 
 
+
+
 .project {
   background-image: url("https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?cs=srgb&dl=pexels-bri-schneiter-28802-346529.jpg&fm=jpg");
   background-repeat: no-repeat;  
@@ -353,7 +355,8 @@ nav a:hover::after {
   left: calc(50% + 250px); 
   top: 50%;
   transform: translateY(-50%) translateX(-20px);
-   width: auto;
+  width: auto;
+
 }
 
 .project a:hover + p,
@@ -390,4 +393,5 @@ nav a:hover::after {
   }
 }
 
+  
   
