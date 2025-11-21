@@ -317,6 +317,7 @@ nav a:hover::after {
   color: white;
   font-size: 1.6rem;
   background: rgba(0,0,0,0.45);
+  border-radius: 20px;
     font-size: 24px;
   font-weight: 600;
   margin-top: 50px;
