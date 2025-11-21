@@ -21,9 +21,12 @@ export default function projects(){
     </p>
     <a href = "https://github.com/bereketmulat/project1">Jack Pot - Lottery </a>
     <p>
-    for this project, I designed a lottery system that let you bet a certain amount on getting a certain sequence of numbers and if those numbers are
-    met you win and if the sequence is not met you can try again  
-
+    for this project, I designed a lottery system where users can place a bet on a specific sequence 
+    of numbers. the program randomly generates numbers sequences and if the users chosen sequence matches the winning numbers 
+    They earn a payout based on their wage. If the sequence doesn't match, the user can try again, 
+    encouraging reparating engagement while demonstrating key concepts like probability, input 
+    validation and random numbers generator, this project showcases my ability to design logical 
+    system, handle user interaction and implement clear win/lose conditions. 
     </p>
     <Link href="/">Back</Link>
    
