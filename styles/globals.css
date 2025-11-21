@@ -324,6 +324,7 @@ nav a:hover::after {
   transition: 0.3s ease;
   max-width: 90%;
   width: auto;
+  text-decortion: None;
 }
 
 .project a:hover {
