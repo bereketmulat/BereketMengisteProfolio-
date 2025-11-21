@@ -5,7 +5,8 @@ export default function projects(){
 
 <div className="project">
     <a href = "https://www.figma.com/proto/OcNAlL2jYjqRaOlFqSwvoq/Assignment-1-and-2-GUI-year-3-sem-1?node-id=722-640&t=QKhZEFwZSXYoL0se-1">Night Shift - Street Wear - Figma Project</a>
-    <p> For this project, we have designed a streetwear fashion e-commerce website called “NightShift”. 
+    <p> Description </p>
+        <p> For this project, we have designed a streetwear fashion e-commerce website called “NightShift”. 
         Nightshift is a website that aims to provide users with a slightly different e-commerce experience, 
         and that promotes an air of exclusivity using various techniques. The context, meaning the audience of 
         our website are mainly millennials and GEN Z- this is reflected in our language choices, styling and colors.
@@ -20,6 +21,7 @@ export default function projects(){
         the patterns used when making the design. 
     </p>
     <a href = "https://github.com/bereketmulat/project1">Jack Pot - Lottery </a>
+    <p> Description </p>
     <p>
     for this project, I designed a lottery system where users can place a bet on a specific sequence 
     of numbers. the program randomly generates numbers sequences and if the users chosen sequence matches the winning numbers 
