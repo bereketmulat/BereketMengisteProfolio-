@@ -372,7 +372,6 @@ nav a:hover::after {
   visibility: visible;
   position: absolute;
   z-index: 10;
-  width: auto;
 }
 
 .project p:hover {
@@ -381,7 +380,7 @@ nav a:hover::after {
   visibility: visible;
   position: absolute;
   z-index: 10;
-  width: auto;
+
 }
 
 
