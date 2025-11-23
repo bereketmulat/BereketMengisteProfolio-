@@ -354,7 +354,7 @@ nav a:hover::after {
   opacity: 0;
   transform: translateX(-20px);
   visibility: hidden;
-  transition: opacity 0.3s ease 1s, transform 0.3s ease 1s, visibility 0.3s 1s;
+  transition: opacity 0.3s ease 0.3s, transform 0.3s ease 0.3s, visibility 0.3s 0.3s;
   padding: clamp(20px, 4vw, 40px);
   position: absolute;
   z-index: 10;
