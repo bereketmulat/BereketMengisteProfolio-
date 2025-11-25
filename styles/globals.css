@@ -3,8 +3,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Times New Roman', serif;
-  background-color: #f2f4f8;
-  color: #222;
+  background-color: black;
   line-height: 1.6;
   scroll-behavior: smooth;
 }
@@ -47,7 +46,15 @@ nav {
   justify-content: center;
   gap: 2rem;
   padding: 1rem 0;
-  background: rgba(255,255,255,0.8);
+  
+
+
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+
+
   backdrop-filter: blur(12px);
   box-shadow: 0 2px 12px rgba(0,0,0,0.08);
   position: sticky;
@@ -58,7 +65,7 @@ nav {
 nav a {
   text-decoration: none;
   font-weight: bold;
-  color: #222;
+  color: #fffdfd;
   position: relative;
   font-size: 1.1rem;
   transition: color 0.3s ease;
@@ -97,12 +104,22 @@ nav a:hover::after {
 .Description2,
 .Description1 {
   flex: 1 1 300px;
-  max-width: 400px;
+  max-width: 350px;
   border-radius: 14px;
   overflow: hidden;
-  background: white;
+
+
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+
+
+
+
   box-shadow: 0 8px 25px rgba(0,0,0,0.1);
   transition: transform 0.35s ease, box-shadow 0.35s ease;
+  color:white;
 }
 .Description img,
 .Description2 img {
@@ -133,10 +150,24 @@ nav a:hover::after {
   margin: 40px auto;
   padding: 25px;
   text-align: center; 
-  background: white;
+  
+
+
+
+
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+
+
+
+
+
   border-radius: 16px;
   box-shadow: 0 10px 35px rgba(0,0,0,0.1);
   transition: all 0.35s ease;
+  color:rgb(255, 255, 255);
 }
 
 
@@ -146,26 +177,93 @@ nav a:hover::after {
   margin: 40px auto;
   padding: 25px;
   text-align: center; 
-  background: white;
+
+
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+
+
   border-radius: 16px;
   box-shadow: 0 10px 35px rgba(0,0,0,0.1);
   transition: all 0.35s ease;
+  color:rgb(255, 252, 252);
 }
 
 
 .Team {
-  width: 90%;
-  max-width: 700px;
+  max-width: 900px;
   margin: 40px auto;
-  padding: 25px;
-  background: white;
-  border-radius: 16px;
-  box-shadow: 0 10px 35px rgba(0,0,0,0.1);
-  transition: all 0.35s ease;
+  padding: 20px;
+  
+
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+
+
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  font-family: 'times';
+  color: #f0f0f0;
+}
+
+.Team ul {
+  list-style: none;
+  padding: 0;
 }
 
 .Team p {
-  text-align: center; 
+  margin: 10px 0 20px 0;
+  line-height: 1.6;
+  color: #e0e0e0;
+  text-align: center;
+}
+
+.Team li {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-top: 25px;
+  padding-bottom: 5px;
+  text-align: center;
+  transition: color 0.3s;
+}
+
+.Team li:hover {
+  color: #0077ff;
+}
+
+.Team p:first-of-type {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Optional: Add a slight fade-in animation */
+.Team ul, .Team li, .Team p {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.6s forwards;
+}
+
+.Team ul {
+  animation-delay: 0.2s;
+}
+
+.Team li:nth-of-type(1) { animation-delay: 0.4s; }
+.Team li:nth-of-type(2) { animation-delay: 0.6s; }
+.Team li:nth-of-type(3) { animation-delay: 0.8s; }
+.Team li:nth-of-type(4) { animation-delay: 1s; }
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 
@@ -174,7 +272,8 @@ nav a:hover::after {
 
 .objective:hover,
 .Education:hover,
-.Team:hover {
+.Team:hover,
+.Skill {
   transform: translateY(-5px) scale(1.02);
 }
 
@@ -218,7 +317,15 @@ nav a:hover::after {
 .Skillslist {
   flex: 2 1 400px;
   padding: 2rem;
-  background: rgba(255,255,255,0.25);
+  
+
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+
+
+
   backdrop-filter: blur(12px);
   border-radius: 20px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.1);
@@ -234,7 +341,7 @@ nav a:hover::after {
   list-style: none;
   padding: 0;
   columns: 2;
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 .Skillslist li {
@@ -255,58 +362,91 @@ nav a:hover::after {
   transform: translateX(6px);
 }
 
-
 .Contact {
-  background-image: url("https://static.vecteezy.com/system/resources/thumbnails/071/599/269/small/a-majestic-snow-capped-mountain-peak-reflects-perfectly-in-a-calm-lake-under-a-starry-night-sky-photo.jpg");
-    position: relative;
+  background-image: url("https://images.unsplash.com/photo-1633886038251-66242d6cf688?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  position: relative;
   width: 100%;
-  height: 100vh; 
   min-height: 100vh;
   background-repeat: no-repeat;
-  background-size: cover;  
-  background-position: center center; 
+  background-size: cover;
+  background-position: center;
+  
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px;  
+  
   overflow: hidden;
 }
 
+
 .ContactInfo {
-  background: rgba(0,0,0,0.45);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(22px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 18px;
+
   padding: 40px 50px;
-  border-radius: 16px;
-  text-align: center;
-  max-width: 450px;
   width: 100%;
+  max-width: 480px;
+  text-align: center;
+
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+  animation: floatCard 6s ease-in-out infinite;
+}
+
+@keyframes floatCard {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
 }
 
 .ContactInfo p,
 .ContactInfo a {
-  color: white;
-  margin: 12px 0;
+  color: #e5eaff;
+  margin: 15px 0;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  text-shadow: 0 0 8px rgba(150, 200, 255, 0.6);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
+.ContactInfo a:hover {
+  color: #9ecbff;
+  text-shadow: 0 0 12px rgba(120, 180, 255, 0.9);
+}
+
+
 .ContactInfo a[href="/"] {
-  background: black;
-  padding: 10px 20px;
+  background: linear-gradient(135deg, #6ee7ff, #9b8cff);
+  color: #000;
+  padding: 12px 28px;
   display: inline-block;
-  border-radius: 8px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: 0.3s ease;
 }
 
 .ContactInfo a[href="/"]:hover {
-  background: #555;
+  transform: translateY(-3px) scale(1.03);
+  opacity: 0.9;
 }
 
 
+@media (max-width: 600px) {
+  .ContactInfo {
+    padding: 30px 30px;
+    max-width: 90%;
+  }
 
-
-
-
-
-
+  .ContactInfo p,
+  .ContactInfo a {
+    font-size: 1rem;
+  }
+}
 
 .project {
-  background-image: url("https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?cs=srgb&dl=pexels-bri-schneiter-28802-346529.jpg&fm=jpg");
+  background-image: url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-repeat: no-repeat;  
   background-size: cover; 
   height: auto;
@@ -318,8 +458,6 @@ nav a:hover::after {
   text-align: center;
   gap: 0;
   padding: 20px; 
-  width: auto;
-  
 }
 
 .project a {
@@ -354,14 +492,14 @@ nav a:hover::after {
   opacity: 0;
   transform: translateX(-20px);
   visibility: hidden;
-  transition: opacity 0.3s ease 0.3s, transform 0.3s ease 0.3s, visibility 0.3s 0.3s;
+  transition: opacity 0.3s ease 1s, transform 0.3s ease 1s, visibility 0.3s 1s;
   padding: clamp(20px, 4vw, 40px);
   position: absolute;
   z-index: 10;
   left: calc(50% + 250px); 
   top: 50%;
   transform: translateY(-50%) translateX(-20px);
-  
+  width: auto;
 
 }
 
@@ -372,7 +510,6 @@ nav a:hover::after {
   visibility: visible;
   position: absolute;
   z-index: 10;
-  width: auto;
 }
 
 .project p:hover {
@@ -381,7 +518,7 @@ nav a:hover::after {
   visibility: visible;
   position: absolute;
   z-index: 10;
-
+  width: auto;
 }
 
 
