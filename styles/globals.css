@@ -211,26 +211,25 @@ nav a:hover::after {
   flex-shrink: 0;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .hobby-img {
-    width: clamp(50px, 20vw, 70px);
-    height: clamp(50px, 20vw, 70px);
+    width: clamp(70px, 22vw, 100px);
+    height: clamp(70px, 22vw, 100px);
   }
   
   .hobby-images {
-    gap: 0.5rem;
+    gap: 0.8rem;
   }
 }
 
 @media (max-width: 480px) {
   .hobby-img {
-    width: clamp(45px, 25vw, 60px);
-    height: clamp(45px, 25vw, 60px);
+    width: clamp(60px, 28vw, 85px);
+    height: clamp(60px, 28vw, 85px);
   }
   
   .hobby-images {
-    gap: 0.3rem;
+    gap: 0.5rem;
   }
 }
 
