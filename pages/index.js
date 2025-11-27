@@ -125,9 +125,11 @@ export default function Home() {
         <li>Python</li>
         <li>Node.js</li>
         <li>Next.js</li>
-        <li>MongoDB, SQL/My SQL</li>
+        <li>MongoDB</li>
         <li>JavaScript</li>
         <li>HTML/CSS</li>
+        <li> MySQL/ SQL</li>
+            
         
 
 
