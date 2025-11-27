@@ -195,7 +195,7 @@ nav a:hover::after {
 .hobby-images {
   display: flex;
   flex-direction: row;
-  gap: 0.8rem;
+  gap: 1rem;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -203,13 +203,16 @@ nav a:hover::after {
 }
 
 .hobby-img {
-  width: clamp(130px, 15vw, 80px);
-  height: clamp(130px, 15vw, 80px);
+  width: clamp(80px, 18vw, 120px);
+  height: clamp(80px, 18vw, 120px);
   border-radius: 50%;
   object-fit: cover;
   margin: 0;
   flex-shrink: 0;
 }
+
+
+
 
 @media (max-width: 768px) {
   .hobby-img {
