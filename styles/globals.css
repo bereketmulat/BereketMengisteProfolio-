@@ -198,16 +198,48 @@ nav a:hover::after {
   gap: 0.8rem;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .hobby-img {
-  width: 180px;
-  height: 180px;
+  width: clamp(60px, 15vw, 80px);
+  height: clamp(60px, 15vw, 80px);
   border-radius: 50%;
   object-fit: cover;
   margin: 0;
   flex-shrink: 0;
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hobby-img {
+    width: clamp(50px, 20vw, 70px);
+    height: clamp(50px, 20vw, 70px);
+  }
+  
+  .hobby-images {
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hobby-img {
+    width: clamp(45px, 25vw, 60px);
+    height: clamp(45px, 25vw, 60px);
+  }
+  
+  .hobby-images {
+    gap: 0.3rem;
+  }
+}
+
+
+
+
+
+
+
 
 
 
