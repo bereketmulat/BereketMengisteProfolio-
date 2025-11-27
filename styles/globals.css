@@ -203,8 +203,8 @@ nav a:hover::after {
 }
 
 .hobby-img {
-  width: clamp(90px, 15vw, 80px);
-  height: clamp(90px, 15vw, 80px);
+  width: clamp(130px, 15vw, 80px);
+  height: clamp(130px, 15vw, 80px);
   border-radius: 50%;
   object-fit: cover;
   margin: 0;
