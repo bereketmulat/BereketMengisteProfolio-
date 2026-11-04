@@ -21,7 +21,18 @@ export default function projects(){
     input validation and random numbers generator. This project showcases my ability to design logical systems and handle user interaction.
 
     </p>
+    <a href = "https://fantasy-football-app-mu.vercel.app">Fantasy Football</a>
+    <p>
+    NFL Pick’em
+    Call every game, settle it with the group chat. Create a private lobby, share the 5-character code with friends and family, 
+    and pick a winner for each game of the week. Picks stay hidden until you’ve locked in all of them, they lock at kickoff,
+    and the scoreboard updates live as games are played. Built with React Native (Expo), Next.js and Supabase.
+       
+    </p>
+
     <Link href="/">Back</Link>
+
+    
    
     
 
