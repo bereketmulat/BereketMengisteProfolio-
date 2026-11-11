@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { useEffect, useRef, useState } from "react";
 
-const NAME = "BEREKET";
+const NAME = "BECK";
 const SKILLS = ["React", "Next.js", "Node.js", "JavaScript", "Python", "HTML/CSS", "MongoDB", "MySQL / SQL"];
 const PERSONAL = ["Collaboration", "Mentorship", "Knowledge sharing", "Architecture"];
 
