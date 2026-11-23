@@ -353,7 +353,7 @@ export default function Home() {
             </p>
             <div className="li">
               <b>Seneca Polytechnic</b>
-              <span>Honours Bachelor of Technology, Software Development</span>
+              <span>Honours Bachelor of Technology, Software Development, GPA: 3.4</span>
               <em>Sept 2023 – Aug 2027</em>
             </div>
           </div>
